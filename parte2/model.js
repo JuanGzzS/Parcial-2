@@ -7,9 +7,10 @@ mongoose.Promise = global.Promise;
 
 let bookmarkCollection = mongoose.Schema({
 
-		id : { type : String},
+		id : uuid.v4(),
 		titulo : { type : String},
-		descripcion : { type : String} 
+		descripcion : { type : String},
+		url : { type : String}
 });
 
 let valorB = mongoose.model('bookmark', bookmarkCollection);
